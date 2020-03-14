@@ -21,6 +21,39 @@ public class UsoThreads {
 
 }
 
+class PelotaHilos implements Runnable {
+	
+	public PelotaHilos(Pelota unaPelota, Component unComponente) {
+		pelota = unaPelota;
+		
+		componente = unComponente;
+		
+	}
+	
+	public void run() {
+
+		for (int i = 1; i <= 3000; i++) {
+
+			pelota.mueve_pelota(componente.getBounds());
+
+			componente.paint(componente.getGraphics());
+
+			try {
+				Thread.sleep(2);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+
+		
+	}
+	
+	private Pelota pelota;
+	
+	private Component componente;
+}
+
 //Movimiento de la pelota-----------------------------------------------------------------------------------------
 
 class Pelota {
@@ -171,14 +204,12 @@ class MarcoRebote extends JFrame {
 
 		lamina.add(pelota);
 
-		for (int i = 1; i <= 3000; i++) {
-
-			pelota.mueve_pelota(lamina.getBounds());
-
-			lamina.paint(lamina.getGraphics());
-
-		}
-
+		Runnable r = new PelotaHilos(pelota, lamina);
+		
+		Thread t = new Thread(r);
+		
+		t.start();
+		
 	}
 
 	private LaminaPelota lamina;
