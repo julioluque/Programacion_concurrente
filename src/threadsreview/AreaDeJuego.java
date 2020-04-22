@@ -11,13 +11,13 @@ import java.awt.*;
  *
  */
 //@SuppressWarnings("serial")
-public class EspacioDePelotas extends JPanel {
+public class AreaDeJuego extends JPanel {
 
 	private static final long serialVersionUID = 12081985L;
 	
 	ArrayList<Pelota> pelotas = new ArrayList<Pelota>();
 
-//	Agregamos una nueva pelota a la lamina
+//	Agregamos una nueva pelota al componente lamina o area de juego
 	public void add(Pelota p) {
 		pelotas.add(p);
 	}

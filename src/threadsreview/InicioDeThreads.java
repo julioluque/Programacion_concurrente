@@ -10,7 +10,7 @@ public class InicioDeThreads implements Serializable{
 
 	public static void main(String[] args) {
 
-		JFrame marco = new MarcoDeLaAplicacion();
+		JFrame marco = new AplicacionController();
 		marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		marco.setVisible(true);
 
