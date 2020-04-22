@@ -90,9 +90,9 @@ public class AplicacionController extends JFrame {
 		hilo.start();
 	}
 	
-	@SuppressWarnings("deprecation")
 	public void detener() {
-		hilo.stop();
+		hilo.interrupt();
+		System.out.println("||||| Hilo detenido...");
 	}
 
 }
