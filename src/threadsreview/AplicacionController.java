@@ -22,7 +22,9 @@ public class AplicacionController extends JFrame {
 	private static final long serialVersionUID = 12081985L;
 
 	private AreaDeJuego areaDeJuego;
-
+	private Thread hilo;
+	
+	
 	public AplicacionController() {
 
 		setBounds(600, 300, 400, 350);
@@ -31,21 +33,42 @@ public class AplicacionController extends JFrame {
 		areaDeJuego = new AreaDeJuego();
 		add(areaDeJuego, BorderLayout.CENTER);
 
+		
 		JPanel areaDeBotones = new JPanel();
-
-		ponerBoton(areaDeBotones, "Empezar!", new ActionListener() {
+		add(areaDeBotones, BorderLayout.SOUTH);
+		
+		
+		ponerBoton(areaDeBotones, "Equipo1", new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
-				comenzarJuego();
+				comenzar();
 			}
 		});
 
+		ponerBoton(areaDeBotones, "Equipo2", new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				comenzar();
+			}
+		});
+
+//		Detiene la ejecucion pero la aplicacion sigue activa
+		ponerBoton(areaDeBotones, "Detener", new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				detener();
+			}
+		});
+		
+//		Cierra la aplicacion
 		ponerBoton(areaDeBotones, "Salir", new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
-
-		add(areaDeBotones, BorderLayout.SOUTH);
+		
+		
 	}
 
 	public void ponerBoton(Container contenedor, String titulo, ActionListener oyente) {
@@ -57,15 +80,19 @@ public class AplicacionController extends JFrame {
 	/**
 	 * Define cantidad de repeticiones que sera controlada por el objeto Pelota
 	 */
-	public void comenzarJuego() {
+	public void comenzar() {
 		Pelota pelota = new Pelota();
 		areaDeJuego.add(pelota);
 		
-		Runnable pelotaAEjecutar = new PelotaHilos(pelota, areaDeJuego);
+//		Runnable pelotaAEjecutar = new PelotaHilos(pelota, areaDeJuego);
 
-		Thread hilo_1 = new Thread(pelotaAEjecutar);
-		
-		hilo_1.start();
+		hilo = new Thread(new PelotaHilos(pelota,  areaDeJuego));
+		hilo.start();
+	}
+	
+	@SuppressWarnings("deprecation")
+	public void detener() {
+		hilo.stop();
 	}
 
 }
