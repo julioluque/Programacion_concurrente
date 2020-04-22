@@ -17,10 +17,11 @@ public class PelotaHilos implements Runnable {
 	@Override
 	public void run() {
 
-		System.out.println(">>>>> Inicio Hilo. Estado de interrupcion = " + Thread.currentThread().isInterrupted());
+		System.out.println(">>>>> STATUS: Inicio Hilo. Estado de interrupcion = " + Thread.currentThread().isInterrupted());
 
 		/*
-		 * EJECUCION CONTROLADA CON LIMITACION DE REPETICIONES, USAMOS SLEEP Y CONTROL DE EXCEPCION
+		 * EJECUCION CONTROLADA CON LIMITACION DE REPETICIONES, USAMOS SLEEP Y CONTROL
+		 * DE EXCEPCION
 		 * 
 		 * int repeticiones = (int) (Math.random() * 3000);
 		 * 
@@ -47,8 +48,15 @@ public class PelotaHilos implements Runnable {
 		while (!Thread.currentThread().isInterrupted()) {
 			pelota.moverPelota(componente.getBounds());
 			componente.paint(componente.getGraphics());
+
+			try {
+				Thread.sleep(7);
+			} catch (Exception e) {
+				System.out.println("||||| EXCEPCION: Se detuvo el hilo durante un sleep");
+				Thread.currentThread().interrupt();
+			}
 		}
-		System.out.println("<<<<< Fin del hilo. Estado de interrupcion = " + Thread.currentThread().isInterrupted());
+		System.out.println("<<<<< STATUS: Fin del hilo. Estado de interrupcion = " + Thread.currentThread().isInterrupted());
 	}
 
 }

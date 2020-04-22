@@ -32,21 +32,24 @@ class PelotaHilos implements Runnable {
 	
 	public void run() {
 
-		for (int i = 1; i <= 3000; i++) {
+		System.out.println("Esado de hilo al iniciar: " + Thread.currentThread().isInterrupted());
+//		for (int i = 1; i <= 3000; i++) {
+		
+		while(!Thread.currentThread().isInterrupted()) {
 
 			pelota.mueve_pelota(componente.getBounds());
 
 			componente.paint(componente.getGraphics());
 
-			try {
-				Thread.sleep(2);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+//			try {
+//				Thread.sleep(2);
+//			} catch (InterruptedException e) {
+//				// TODO Auto-generated catch block
+//				e.printStackTrace();
+//			}
 		}
 
-		
+		System.out.println("Esado de hilo al finalizar: " + Thread.currentThread().isInterrupted());
 	}
 	
 	private Pelota pelota;
@@ -171,6 +174,17 @@ class MarcoRebote extends JFrame {
 
 		});
 
+		ponerBoton(laminaBotones, "Detener", new ActionListener() {
+
+			public void actionPerformed(ActionEvent evento) {
+
+				detener();
+
+			}
+
+		});
+
+		
 		ponerBoton(laminaBotones, "Salir", new ActionListener() {
 
 			public void actionPerformed(ActionEvent evento) {
@@ -206,12 +220,19 @@ class MarcoRebote extends JFrame {
 
 		Runnable r = new PelotaHilos(pelota, lamina);
 		
-		Thread t = new Thread(r);
+//		Thread t = new Thread(r);
+
+		t = new Thread(r);
 		
 		t.start();
 		
 	}
+	
+	public void detener() {
+		t.isInterrupted();
+	}
 
+	Thread t;
 	private LaminaPelota lamina;
 
 }
