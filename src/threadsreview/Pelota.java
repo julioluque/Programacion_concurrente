@@ -25,5 +25,23 @@ public class Pelota {
 		x += dx;
 		y += dy;
 
+		if (x < borde.getMinX()) {
+			x = borde.getMinX();
+			dx = -dx;
+		}
+
+		if (x + TAMX >= borde.getMaxX()) {
+			x = borde.getMaxX() - TAMX;
+		}
+
+		if (y < borde.getMinY()) {
+			y = borde.getMinY();
+			dy = -dy;
+		}
+
+		if (y + TAMY >= borde.getMaxY()) {
+			y = borde.getMaxY() - TAMY;
+			dy = -dy;
+		}
 	}
 }
