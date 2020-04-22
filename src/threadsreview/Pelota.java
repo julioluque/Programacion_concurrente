@@ -1,7 +1,6 @@
 package threadsreview;
 
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Rectangle2D;
+import java.awt.geom.*;
 
 public class Pelota {
 
@@ -32,6 +31,7 @@ public class Pelota {
 
 		if (x + TAMX >= borde.getMaxX()) {
 			x = borde.getMaxX() - TAMX;
+			dx = -dx;
 		}
 
 		if (y < borde.getMinY()) {

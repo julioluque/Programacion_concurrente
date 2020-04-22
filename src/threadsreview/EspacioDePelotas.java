@@ -1,18 +1,16 @@
 package threadsreview;
 
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.util.ArrayList;
-
-import javax.swing.JPanel;
-
+import javax.swing.*;
+import java.util.*;
+import java.awt.*;
 /**
  * Lamina que dibuja la pelota
  * 
  * @author Alfredo
  *
  */
-public class LaminaPelota extends JPanel {
+@SuppressWarnings("serial")
+public class EspacioDePelotas extends JPanel {
 
 	ArrayList<Pelota> pelotas = new ArrayList<Pelota>();
 
@@ -21,8 +19,8 @@ public class LaminaPelota extends JPanel {
 		pelotas.add(p);
 	}
 
-	public void pintarComponente(Graphics g) {
-		super.paintComponents(g);
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
 
 		Graphics2D g2 = (Graphics2D) g;
 
