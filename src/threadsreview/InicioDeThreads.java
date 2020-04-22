@@ -1,15 +1,18 @@
 package threadsreview;
 
+import java.io.Serializable;
+
 import javax.swing.*;
 
-public class InicioDeThreads {
+public class InicioDeThreads implements Serializable{
 
-	public static void main (String[]args) {
-		
-		JFrame marco = new MarcoDeRebote();
+	private static final long serialVersionUID = 12081985L;
+
+	public static void main(String[] args) {
+
+		JFrame marco = new MarcoDeLaAplicacion();
 		marco.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		marco.setVisible(true);
-		
-		
+
 	}
 }

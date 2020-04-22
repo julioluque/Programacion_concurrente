@@ -1,9 +1,18 @@
 package threadsreview;
 
 import java.awt.geom.*;
+import java.io.Serializable;
 
-public class Pelota {
 
+/**
+ * Controlador el movimiento de pelota segun coordenadas x e y
+ * @author Alfredo
+ *
+ */
+public class Pelota implements Serializable{
+
+	private static final long serialVersionUID = 12081985L;
+	
 	private double x = 0;
 	private double y = 0;
 	private double dx = 1;

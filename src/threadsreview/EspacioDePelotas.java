@@ -3,15 +3,18 @@ package threadsreview;
 import javax.swing.*;
 import java.util.*;
 import java.awt.*;
+
 /**
- * Lamina que dibuja la pelota
+ * Contruimos un espacio de movimiento y controla los graficos del objeto Pelota
  * 
  * @author Alfredo
  *
  */
-@SuppressWarnings("serial")
+//@SuppressWarnings("serial")
 public class EspacioDePelotas extends JPanel {
 
+	private static final long serialVersionUID = 12081985L;
+	
 	ArrayList<Pelota> pelotas = new ArrayList<Pelota>();
 
 //	Agregamos una nueva pelota a la lamina

@@ -4,11 +4,22 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-@SuppressWarnings("serial")
-public class MarcoDeRebote extends JFrame {
+/**
+ * Creamos el marco de la aplicacion, donde definiremos el espacio de movimiento
+ * y el espacio para los botones
+ * 
+ * @author Alfredo
+ *
+ */
+//@SuppressWarnings("serial")
+public class MarcoDeLaAplicacion extends JFrame {
 
-	public MarcoDeRebote() {
-		
+	private static final long serialVersionUID = 12081985L;	
+	
+	private EspacioDePelotas espacioDePelotas;
+
+	public MarcoDeLaAplicacion() {
+
 		setBounds(600, 300, 400, 350);
 		setTitle("Rebotes");
 
@@ -26,7 +37,6 @@ public class MarcoDeRebote extends JFrame {
 		ponerBoton(espacioDeBotones, "Salir", new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
-
 			}
 		});
 
@@ -48,6 +58,5 @@ public class MarcoDeRebote extends JFrame {
 			espacioDePelotas.paint(espacioDePelotas.getGraphics());
 		}
 	}
-	
-	private EspacioDePelotas espacioDePelotas;
+
 }
