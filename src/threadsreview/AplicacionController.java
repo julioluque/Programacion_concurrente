@@ -114,8 +114,19 @@ public class AplicacionController extends JFrame {
 	public void comenzar(ActionEvent evento) {
 		Pelota pelota = new Pelota();
 		areaDeJuego.add(pelota);
-
 		Runnable pelotaAEjecutar = new PelotaHilos(pelota, areaDeJuego);
+
+		Pelota pelota1 = new Pelota();
+		areaDeJuego.add(pelota1);
+		Runnable pelotaAEjecutar1 = new PelotaHilos(pelota1, areaDeJuego);
+
+		Pelota pelota2 = new Pelota();
+		areaDeJuego.add(pelota2);
+		Runnable pelotaAEjecutar2 = new PelotaHilos(pelota2, areaDeJuego);
+
+		Pelota pelota3 = new Pelota();
+		areaDeJuego.add(pelota3);
+		Runnable pelotaAEjecutar3 = new PelotaHilos(pelota3, areaDeJuego);
 
 		if (evento.getSource().equals(botonIniciar1)) {
 			hilo1 = new Thread(pelotaAEjecutar);
@@ -126,37 +137,14 @@ public class AplicacionController extends JFrame {
 		} else if (evento.getSource().equals(botonIniciar3)) {
 			hilo3 = new Thread(pelotaAEjecutar);
 			hilo3.start();
-		} else if(evento.getSource().equals(botonIniciarTodos)) {
-			hilo1 = new Thread(pelotaAEjecutar);
+		} else if (evento.getSource().equals(botonIniciarTodos)) {
+			hilo1 = new Thread(pelotaAEjecutar1);
+			hilo2 = new Thread(pelotaAEjecutar2);
+			hilo3 = new Thread(pelotaAEjecutar3);
 			hilo1.start();
-			try {
-				Thread.sleep(2000);
-				hilo1.join();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			
-			hilo2 = new Thread(pelotaAEjecutar);
 			hilo2.start();
-			try {
-				hilo2.join();
-				Thread.sleep(2000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-
-			hilo3 = new Thread(pelotaAEjecutar);
 			hilo3.start();
-			try {
-				hilo3.join();
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
-		
-		
 	}
 
 	public void detener(ActionEvent evento) {
@@ -172,12 +160,12 @@ public class AplicacionController extends JFrame {
 		} else if (evento.getSource().equals(botonDetener3)) {
 			hilo3.interrupt();
 			System.out.println("||||| ACTION: Se detuvo el hilo 3. INFO: " + hilo3);
-		}else if(evento.getSource().equals(botonDetenerTodos)) {
+		} else if (evento.getSource().equals(botonDetenerTodos)) {
 			hilo1.interrupt();
 			hilo2.interrupt();
 			hilo3.interrupt();
 			System.out.println("||||| ACTION: Se detuvo todos los hilo. INFO: " + hilo3);
 		}
-		
+
 	}
 }
