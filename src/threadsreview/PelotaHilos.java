@@ -2,10 +2,7 @@ package threadsreview;
 
 import java.awt.Component;
 
-import com.sun.media.sound.SoftTuning;
-
 public class PelotaHilos implements Runnable {
-
 	private Pelota pelota;
 	private Component componente;
 
@@ -17,7 +14,8 @@ public class PelotaHilos implements Runnable {
 	@Override
 	public void run() {
 
-		System.out.println(">>>>> STATUS: Inicio Hilo. Estado de interrupcion = " + Thread.currentThread().isInterrupted());
+		System.out.println(
+				">>>>> STATUS: Inicio Hilo. Estado de interrupcion = " + Thread.currentThread().isInterrupted());
 
 		/*
 		 * EJECUCION CONTROLADA CON LIMITACION DE REPETICIONES, USAMOS SLEEP Y CONTROL
@@ -46,17 +44,19 @@ public class PelotaHilos implements Runnable {
 		 * EJECUCION CON ESTADO DE HILO ESPECIFICO ACTIVO, INFINITO
 		 */
 		while (!Thread.currentThread().isInterrupted()) {
+			
 			pelota.moverPelota(componente.getBounds());
 			componente.paint(componente.getGraphics());
 
 			try {
-				Thread.sleep(7);
+				Thread.sleep(15);
 			} catch (Exception e) {
 				System.out.println("||||| EXCEPCION: Se detuvo el hilo durante un sleep");
 				Thread.currentThread().interrupt();
 			}
 		}
-		System.out.println("<<<<< STATUS: Fin del hilo. Estado de interrupcion = " + Thread.currentThread().isInterrupted());
+		System.out.println(
+				"<<<<< STATUS: Fin del hilo. Estado de interrupcion = " + Thread.currentThread().isInterrupted());
 	}
 
 }

@@ -1,8 +1,10 @@
 package threadsreview;
 
-import javax.swing.*;
-import java.util.*;
-import java.awt.*;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.util.ArrayList;
+
+import javax.swing.JPanel;
 
 /**
  * Contruimos un espacio de movimiento y controla los graficos del objeto Pelota
@@ -14,7 +16,7 @@ import java.awt.*;
 public class AreaDeJuego extends JPanel {
 
 	private static final long serialVersionUID = 12081985L;
-	
+
 	ArrayList<Pelota> pelotas = new ArrayList<Pelota>();
 
 //	Agregamos una nueva pelota al componente lamina o area de juego

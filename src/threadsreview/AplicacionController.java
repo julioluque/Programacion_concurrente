@@ -1,13 +1,14 @@
 package threadsreview;
 
 import java.awt.BorderLayout;
-import java.awt.Container;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import sun.rmi.runtime.NewThreadAction;
 
 /**
  * Creamos el marco de la aplicacion, donde definiremos el espacio de movimiento
@@ -24,12 +25,12 @@ public class AplicacionController extends JFrame {
 	private AreaDeJuego areaDeJuego;
 	private Thread hilo1, hilo2, hilo3;
 
-	JButton botonIniciar1, botonIniciar2, botonIniciar3;
-	JButton botonDetener1, botonDetener2, botonDetener3;
+	JButton botonIniciar1, botonIniciar2, botonIniciar3, botonIniciarTodos;
+	JButton botonDetener1, botonDetener2, botonDetener3, botonDetenerTodos;
 
 	public AplicacionController() {
 
-		setBounds(870, 0, 500, 745);
+		setBounds(770, 0, 600, 745);
 		setTitle("Rebotes");
 
 		areaDeJuego = new AreaDeJuego();
@@ -41,18 +42,22 @@ public class AplicacionController extends JFrame {
 		botonIniciar1 = new JButton("Go 1");
 		botonIniciar2 = new JButton("Go 2");
 		botonIniciar3 = new JButton("Go 3");
+		botonIniciarTodos = new JButton("Go All");
 
 		areaDeBotones.add(botonIniciar1);
 		areaDeBotones.add(botonIniciar2);
 		areaDeBotones.add(botonIniciar3);
+		areaDeBotones.add(botonIniciarTodos);
 
 		botonDetener1 = new JButton("X 1");
 		botonDetener2 = new JButton("X 2");
 		botonDetener3 = new JButton("X 3");
+		botonDetenerTodos = new JButton("X All");
 
 		areaDeBotones.add(botonDetener1);
 		areaDeBotones.add(botonDetener2);
 		areaDeBotones.add(botonDetener3);
+		areaDeBotones.add(botonDetenerTodos);
 
 		botonIniciar1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -89,6 +94,18 @@ public class AplicacionController extends JFrame {
 				detener(e);
 			}
 		});
+
+		botonIniciarTodos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				comenzar(e);
+			}
+		});
+
+		botonDetenerTodos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				detener(e);
+			}
+		});
 	}
 
 	/**
@@ -109,7 +126,37 @@ public class AplicacionController extends JFrame {
 		} else if (evento.getSource().equals(botonIniciar3)) {
 			hilo3 = new Thread(pelotaAEjecutar);
 			hilo3.start();
+		} else if(evento.getSource().equals(botonIniciarTodos)) {
+			hilo1 = new Thread(pelotaAEjecutar);
+			hilo1.start();
+			try {
+				Thread.sleep(2000);
+				hilo1.join();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			
+			hilo2 = new Thread(pelotaAEjecutar);
+			hilo2.start();
+			try {
+				hilo2.join();
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+
+			hilo3 = new Thread(pelotaAEjecutar);
+			hilo3.start();
+			try {
+				hilo3.join();
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
+		
+		
 	}
 
 	public void detener(ActionEvent evento) {
@@ -125,7 +172,12 @@ public class AplicacionController extends JFrame {
 		} else if (evento.getSource().equals(botonDetener3)) {
 			hilo3.interrupt();
 			System.out.println("||||| ACTION: Se detuvo el hilo 3. INFO: " + hilo3);
+		}else if(evento.getSource().equals(botonDetenerTodos)) {
+			hilo1.interrupt();
+			hilo2.interrupt();
+			hilo3.interrupt();
+			System.out.println("||||| ACTION: Se detuvo todos los hilo. INFO: " + hilo3);
 		}
+		
 	}
-
 }

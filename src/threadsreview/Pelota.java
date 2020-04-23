@@ -1,22 +1,26 @@
 package threadsreview;
 
-import java.awt.geom.*;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Rectangle2D;
 import java.io.Serializable;
-
 
 /**
  * Controlador el movimiento de pelota segun coordenadas x e y
+ * 
  * @author Alfredo
  *
  */
-public class Pelota implements Serializable{
+public class Pelota implements Serializable {
 
 	private static final long serialVersionUID = 12081985L;
-	
+
 	private double x = 0;
 	private double y = 0;
-	private double dx = 1;
-	private double dy = 1;
+//	private double dx = 1;
+//	private double dy = 1;
+	
+	private double dx = Math.random()*10;
+	private double dy = Math.random()*10;
 
 	private static final int TAMX = 15;
 	private static final int TAMY = 15;
