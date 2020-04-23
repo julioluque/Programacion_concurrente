@@ -14,9 +14,26 @@ public class PelotaHilos implements Runnable {
 	@Override
 	public void run() {
 
+		/*
+		 * EJECUCION CON ESTADO DE HILO ESPECIFICO ACTIVO, INFINITO
+		 */
 		System.out.println(
-				">>>>> STATUS: Inicio Hilo. Estado de interrupcion = " + Thread.currentThread().isInterrupted());
+				">>>>> STATUS : NUEVO | Hilo interrumpido? = " + Thread.currentThread().isInterrupted());
 
+		while (!Thread.currentThread().isInterrupted()) {
+
+			pelota.moverPelota(componente.getBounds());
+			componente.paint(componente.getGraphics());
+
+			try {
+				Thread.sleep(15);
+			} catch (Exception e) {
+				System.out.println("||||| EXCEPCION: Se detuvo el hilo durante un sleep");
+				Thread.currentThread().interrupt();
+			}
+		}
+		System.out.println(
+				"<<<<< STATUS : MUERTO | Hilo interrumpido? = " + Thread.currentThread().isInterrupted());
 		/*
 		 * EJECUCION CONTROLADA CON LIMITACION DE REPETICIONES, USAMOS SLEEP Y CONTROL
 		 * DE EXCEPCION
@@ -40,23 +57,6 @@ public class PelotaHilos implements Runnable {
 		 * componente.paint(componente.getGraphics()); }
 		 */
 
-		/*
-		 * EJECUCION CON ESTADO DE HILO ESPECIFICO ACTIVO, INFINITO
-		 */
-		while (!Thread.currentThread().isInterrupted()) {
-			
-			pelota.moverPelota(componente.getBounds());
-			componente.paint(componente.getGraphics());
-
-			try {
-				Thread.sleep(15);
-			} catch (Exception e) {
-				System.out.println("||||| EXCEPCION: Se detuvo el hilo durante un sleep");
-				Thread.currentThread().interrupt();
-			}
-		}
-		System.out.println(
-				"<<<<< STATUS: Fin del hilo. Estado de interrupcion = " + Thread.currentThread().isInterrupted());
 	}
 
 }

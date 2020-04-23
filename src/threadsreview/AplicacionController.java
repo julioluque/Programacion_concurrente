@@ -151,20 +151,20 @@ public class AplicacionController extends JFrame {
 
 		if (evento.getSource().equals(botonDetener1)) {
 			hilo1.interrupt();
-			System.out.println("||||| ACTION: Se detuvo el hilo 1. INFO: " + hilo1);
+			System.out.println("||||| ACTION: Se detuvo el hilo 1. INFO: " + getName());
 
 		} else if (evento.getSource().equals(botonDetener2)) {
 			hilo2.interrupt();
-			System.out.println("||||| ACTION: Se detuvo el hilo 2. INFO: " + hilo2);
+			System.out.println("||||| ACTION: Se detuvo el hilo 2. INFO: " + getName());
 
 		} else if (evento.getSource().equals(botonDetener3)) {
 			hilo3.interrupt();
-			System.out.println("||||| ACTION: Se detuvo el hilo 3. INFO: " + hilo3);
+			System.out.println("||||| ACTION: Se detuvo el hilo 3. INFO: " + getName());
 		} else if (evento.getSource().equals(botonDetenerTodos)) {
 			hilo1.interrupt();
 			hilo2.interrupt();
 			hilo3.interrupt();
-			System.out.println("||||| ACTION: Se detuvo todos los hilo. INFO: " + hilo3);
+			System.out.println("||||| ACTION: Se detuvieron todos los hilos... ");
 		}
 
 	}
