@@ -1,5 +1,7 @@
 package usothreads;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 public class BancoSinSincronizar {
 
 	public static void main(String[] args) {
@@ -17,6 +19,7 @@ public class BancoSinSincronizar {
 
 class Banco {
 	private final double[] cuentas;
+	private ReentrantLock cierreBanco = new ReentrantLock();
 
 	/**
 	 * Crear 100 cuentas corrientes y qeucada cuenta almacena 2000 pesos
@@ -42,27 +45,32 @@ class Banco {
 	 */
 	public void transferencia(int cuentaOrigen, int cuentaDestino, double cantidad) {
 
-//		validamos que el saldo no sea mayor a la cantidad a transferir
-		if (cuentas[cuentaOrigen] < cantidad) {
-			return;
+		cierreBanco.lock();
+		
+		try {
+//			validamos que el saldo no sea mayor a la cantidad a transferir
+			if (cuentas[cuentaOrigen] < cantidad) {
+				return;
+			}
+
+//			informa el hilo que va a ejecutar
+			System.out.println(Thread.currentThread());
+
+//			Descontamos del saldo de la cuenta origen, la cantidad que queremos transferir
+			cuentas[cuentaOrigen] -= cantidad;
+
+//			Informa la cuenta origne, destino y dinero a trasnferir
+			System.out.printf("%10.2f de %d para %d", cantidad, cuentaOrigen, cuentaDestino);
+
+//			incrementamos el saldo de la cuenta destino con la cantidad transferida
+			cuentas[cuentaDestino] += cantidad;
+
+			System.out.printf(" Saldo total : %10.2f%n", getSaldoTotal());
+
+		} finally {
+			
+			cierreBanco.unlock();
 		}
-
-//		informa el hilo que va a ejecutar
-//		System.out.println(Thread.currentThread());
-
-//		Descontamos del saldo de la cuenta origen, la cantidad que queremos transferir
-		cuentas[cuentaOrigen] -= cantidad;
-		System.out.println("-----------------------------------");
-//		Informa la cuenta origne, destino y dinero a trasnferir
-		System.out.printf("\n(-) %10.2f de %d para %d | Saldo total : %10.2f%n", cantidad, cuentaOrigen, cuentaDestino,
-				getSaldoTotal());
-
-//		incrementamos el saldo de la cuenta destino con la cantidad transferida
-		cuentas[cuentaDestino] += cantidad;
-		System.out.printf("\n(+) %10.2f de %d para %d | Saldo total : %10.2f%n", cantidad, cuentaOrigen, cuentaDestino,
-				getSaldoTotal());
-
-//		System.out.printf("Saldo total : %10.2f%n", getSaldoTotal());
 	}
 
 	/**
@@ -112,7 +120,7 @@ class EjecucionTransfrencias implements Runnable {
 
 				banco.transferencia(deLaCuenta, paraLaCuenta, cantidad);
 //				Thread.sleep((int) Math.random() * 10);
-				Thread.sleep(1000);
+				Thread.sleep(10);
 			}
 		} catch (InterruptedException e) {
 			System.out.println("  ||| EXCEPCION");

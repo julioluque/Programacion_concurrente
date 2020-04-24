@@ -4,12 +4,19 @@ public class Ventanilla {
 
 	public static void main(String[] args) {
 
-		int cuentas = 100;
-		double saldoInicial = 2000;
-		Banco banco = new Banco(cuentas, saldoInicial);
+		int cantidadDeCuentas = 100;
+		double saldoAperturaDeCuenta = 2000;
+		Banco banco = new Banco(cantidadDeCuentas, saldoAperturaDeCuenta);
 
-		for (int cuenta = 0; cuenta < cuentas; cuenta++) {
-			HilosTransferencias gestor = new HilosTransferencias(banco, cuenta, saldoInicial, cuentas);
+		for (int i = 0; i < cantidadDeCuentas; i++) {
+			
+			// operacion por ventanilla
+			int cuentaOrigen = i;
+			int cuentaDestino = (int) (Math.random() * cantidadDeCuentas);
+			double montoATransferir = Math.random() * saldoAperturaDeCuenta;
+
+			HilosTransferencias gestor = new HilosTransferencias(banco, cuentaOrigen, cuentaDestino, montoATransferir);
+			
 			Thread t = new Thread(gestor);
 			t.start();
 		}

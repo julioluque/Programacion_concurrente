@@ -1,18 +1,22 @@
 package modulobancario;
 
+/**
+ * Controla transferencias simultaneas
+ * @author Alfredo
+ *
+ */
 public class HilosTransferencias implements Runnable {
 
 	private Banco banco;
-	private int cuentas;
 	private int cuentaOrigen;
-	private double montoMaximo;
+	private int cuentaDestino;
+	private double montoATransferir;
 
-	public HilosTransferencias(Banco banco, int origen, double cantidad, int cuentas) {
+	public HilosTransferencias(Banco banco, int origen, int destino, double monto) {
 		this.banco = banco;
-		this.cuentas = cuentas;
 		cuentaOrigen = origen;
-		montoMaximo = cantidad;
-
+		cuentaDestino = destino;
+		montoATransferir = monto;
 	}
 
 	@Override
@@ -20,15 +24,11 @@ public class HilosTransferencias implements Runnable {
 
 		try {
 			while (true) {
-				int cuentaDestino = (int) (Math.random() * cuentas);
-				double monto = Math.random() * montoMaximo;
-
-				banco.transferir(cuentaOrigen, cuentaDestino, monto);
-
+				banco.transferir(cuentaOrigen, cuentaDestino, montoATransferir);
 				Thread.sleep(50);
 			}
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+			System.out.println("Error de TimeOut -> Excepcion: \n");
 			e.printStackTrace();
 		}
 	}
