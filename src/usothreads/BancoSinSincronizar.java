@@ -5,8 +5,8 @@ public class BancoSinSincronizar {
 	public static void main(String[] args) {
 
 		Banco b = new Banco();
-		
-		for(int i = 0; i<100; i++) {
+
+		for (int i = 0; i < 100; i++) {
 			EjecucionTransfrencias r = new EjecucionTransfrencias(b, i, 2000);
 			Thread t = new Thread(r);
 			t.start();
@@ -48,18 +48,21 @@ class Banco {
 		}
 
 //		informa el hilo que va a ejecutar
-		System.out.println(Thread.currentThread());
+//		System.out.println(Thread.currentThread());
 
 //		Descontamos del saldo de la cuenta origen, la cantidad que queremos transferir
 		cuentas[cuentaOrigen] -= cantidad;
-
+		System.out.println("-----------------------------------");
 //		Informa la cuenta origne, destino y dinero a trasnferir
-		System.out.printf("%10.2f de %d para %d ", cantidad, cuentaOrigen, cuentaDestino);
+		System.out.printf("\n(-) %10.2f de %d para %d | Saldo total : %10.2f%n", cantidad, cuentaOrigen, cuentaDestino,
+				getSaldoTotal());
 
 //		incrementamos el saldo de la cuenta destino con la cantidad transferida
 		cuentas[cuentaDestino] += cantidad;
+		System.out.printf("\n(+) %10.2f de %d para %d | Saldo total : %10.2f%n", cantidad, cuentaOrigen, cuentaDestino,
+				getSaldoTotal());
 
-		System.out.printf("Saldo total : %10.2f%n", getSaldoTotal());
+//		System.out.printf("Saldo total : %10.2f%n", getSaldoTotal());
 	}
 
 	/**
