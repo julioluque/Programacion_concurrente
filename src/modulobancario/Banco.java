@@ -19,6 +19,7 @@ public class Banco {
 
 	public Banco(int cuenta, double saldoInicial) {
 		montoCuentasList = new double[cuenta];
+		fondosInsuficientes = bloqueoSincronizador.newCondition();
 
 		for (int nroCuenta = 0; nroCuenta < montoCuentasList.length; nroCuenta++) {
 			montoCuentasList[nroCuenta] = saldoInicial;
@@ -37,15 +38,19 @@ public class Banco {
 		bloqueoSincronizador.lock();
 
 		try {
-			System.out.print("\n" + Thread.currentThread());
+
+			System.out.print("\n" + Thread.currentThread() + "\n");
 
 			while (montoCuentasList[cuentaOrigen] < cantidadATransferir) {
+
 				System.out.printf(
 						"--- FONDOS INSUFICIENTES --- \n Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
 						cuentaOrigen, montoCuentasList[cuentaOrigen], cantidadATransferir);
-				
-				fondosInsuficientes.await();
 
+				fondosInsuficientes.await();
+				System.out.printf(
+						"--- SE LIBERO LA CUENTA --- \n Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
+						cuentaOrigen, montoCuentasList[cuentaOrigen], cantidadATransferir);
 			}
 
 			System.out.printf(
@@ -56,9 +61,11 @@ public class Banco {
 			double saldo = getSaldoTotal();
 			montoCuentasList[cuentaDestino] += cantidadATransferir;
 
-			System.out.printf("%10.2f de %3d para %3d | Saldos [anterior:%10.2f  Total:%10.2f] %n", cantidadATransferir,
+			System.out.printf("%8.2f de %3d para %3d | Saldos [anterior:%10.2f  Total:%10.2f] %n", cantidadATransferir,
 					cuentaOrigen, cuentaDestino, saldo, getSaldoTotal());
-			
+
+			fondosInsuficientes.signalAll();
+
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 			System.out.println();
