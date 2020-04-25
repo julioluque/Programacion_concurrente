@@ -1,8 +1,5 @@
 package usothreads;
 
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.ReentrantLock;
-
 public class BancoSinSincronizar {
 
 	public static void main(String[] args) {
@@ -20,8 +17,6 @@ public class BancoSinSincronizar {
 
 class Banco {
 	private final double[] cuentas;
-	private ReentrantLock cierreBanco = new ReentrantLock();
-	private Condition saldoSuficiente;
 
 	/**
 	 * Crear 100 cuentas corrientes y qeucada cuenta almacena 2000 pesos
@@ -36,9 +31,6 @@ class Banco {
 			System.out.println("Cuenta corriente: " + i + "/$" + cuentas[i]);
 
 		}
-
-		// EL bloqueo se establece en base a una condicion. Condicion = saldo sufuciente
-		saldoSuficiente = cierreBanco.newCondition();
 	}
 
 	/**
@@ -49,17 +41,13 @@ class Banco {
 	 * @param cantidad
 	 * @throws InterruptedException
 	 */
-	public void transferencia(int cuentaOrigen, int cuentaDestino, double cantidad) throws InterruptedException {
-
-		cierreBanco.lock();
-
-		try {
+	public synchronized void transferencia(int cuentaOrigen, int cuentaDestino, double cantidad) throws InterruptedException {
 
 //			validamos que el saldo no sea mayor a la cantidad a transferir
 			while (cuentas[cuentaOrigen] < cantidad) {
 				System.out.println("--------------- SALDO INSUFICIENTE ------- cuenta Origen: " + cuentaOrigen
 						+ "... saldo: " + cuentas[cuentaOrigen] + " ... cantidad: " + cantidad);
-				saldoSuficiente.await();
+				wait();
 			}
 
 			System.out.println("--------------- CANTIDAD OK ----------- cuenta Origen: " + cuentaOrigen + "... saldo: "
@@ -79,12 +67,8 @@ class Banco {
 
 			System.out.printf(" Saldo total : %10.2f%n", getSaldoTotal());
 
-			saldoSuficiente.signalAll();
+			notifyAll();
 
-		} finally {
-
-			cierreBanco.unlock();
-		}
 	}
 
 	/**
