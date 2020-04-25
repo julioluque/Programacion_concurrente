@@ -25,13 +25,13 @@ public class Ventanilla {
 			Thread t = new Thread(gestor);
 			t.start();
 			
-			try {
-				PrintStream out = new PrintStream(new FileOutputStream("logHilos.txt"));
-				System.setOut(out);
-				
-			} catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
+//			try {
+//				PrintStream out = new PrintStream(new FileOutputStream("logHilos.txt"));
+//				System.setOut(out);
+//				
+//			} catch (FileNotFoundException e) {
+//				e.printStackTrace();
+//			}
 		}
 
 	}

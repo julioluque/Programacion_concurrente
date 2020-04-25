@@ -1,8 +1,6 @@
 package usothreads;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class BancoSinSincronizar {
@@ -23,7 +21,8 @@ public class BancoSinSincronizar {
 class Banco {
 	private final double[] cuentas;
 	private ReentrantLock cierreBanco = new ReentrantLock();
-	
+	private Condition saldoSuficiente;
+
 	/**
 	 * Crear 100 cuentas corrientes y qeucada cuenta almacena 2000 pesos
 	 */
@@ -37,6 +36,9 @@ class Banco {
 			System.out.println("Cuenta corriente: " + i + "/$" + cuentas[i]);
 
 		}
+
+		// EL bloqueo se establece en base a una condicion. Condicion = saldo sufuciente
+		saldoSuficiente = cierreBanco.newCondition();
 	}
 
 	/**
@@ -45,22 +47,23 @@ class Banco {
 	 * @param cuentaOrigen
 	 * @param cuentaDestino
 	 * @param cantidad
+	 * @throws InterruptedException
 	 */
-	public void transferencia(int cuentaOrigen, int cuentaDestino, double cantidad) {
+	public void transferencia(int cuentaOrigen, int cuentaDestino, double cantidad) throws InterruptedException {
 
 		cierreBanco.lock();
 
 		try {
 
 //			validamos que el saldo no sea mayor a la cantidad a transferir
-			if (cuentas[cuentaOrigen] < cantidad) {
-				System.out.println("--------- CANTIDAD INSUFICIENTES ------ cuenta Origen: " + cuentaOrigen
+			while (cuentas[cuentaOrigen] < cantidad) {
+				System.out.println("--------------- SALDO INSUFICIENTE ------- cuenta Origen: " + cuentaOrigen
 						+ "... saldo: " + cuentas[cuentaOrigen] + " ... cantidad: " + cantidad);
-				return;
-			} else {
-				System.out.println("--------------- CANTIDAD OK ----------- cuenta Origen: " + cuentaOrigen
-						+ "... saldo: " + cuentas[cuentaOrigen] + " ... cantidad: " + cantidad);
+				saldoSuficiente.await();
 			}
+
+			System.out.println("--------------- CANTIDAD OK ----------- cuenta Origen: " + cuentaOrigen + "... saldo: "
+					+ cuentas[cuentaOrigen] + " ... cantidad: " + cantidad);
 
 //			informa el hilo que va a ejecutar
 			System.out.println(Thread.currentThread());
@@ -75,6 +78,8 @@ class Banco {
 			cuentas[cuentaDestino] += cantidad;
 
 			System.out.printf(" Saldo total : %10.2f%n", getSaldoTotal());
+
+			saldoSuficiente.signalAll();
 
 		} finally {
 
@@ -129,7 +134,7 @@ class EjecucionTransfrencias implements Runnable {
 
 				banco.transferencia(deLaCuenta, paraLaCuenta, cantidad);
 //				Thread.sleep((int) Math.random() * 10);
-				Thread.sleep(1000);
+				Thread.sleep(100);
 			}
 		} catch (InterruptedException e) {
 			System.out.println("  ||| EXCEPCION");

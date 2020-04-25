@@ -1,5 +1,6 @@
 package modulobancario;
 
+import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -13,6 +14,8 @@ public class Banco {
 	private final double[] montoCuentasList;
 
 	private ReentrantLock bloqueoSincronizador = new ReentrantLock();
+
+	private Condition fondosInsuficientes;
 
 	public Banco(int cuenta, double saldoInicial) {
 		montoCuentasList = new double[cuenta];
@@ -36,24 +39,29 @@ public class Banco {
 		try {
 			System.out.print("\n" + Thread.currentThread());
 
-			if (montoCuentasList[cuentaOrigen] < cantidadATransferir) {
+			while (montoCuentasList[cuentaOrigen] < cantidadATransferir) {
 				System.out.printf(
 						"--- FONDOS INSUFICIENTES --- \n Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
-						cuentaDestino, montoCuentasList[cuentaOrigen], cantidadATransferir);
-				return;
-			} else {
+						cuentaOrigen, montoCuentasList[cuentaOrigen], cantidadATransferir);
+				
+				fondosInsuficientes.await();
 
-				System.out.printf(
-						"--- TRANSFERENCIA AUTORIZADA --- \n Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
-						cuentaDestino, montoCuentasList[cuentaOrigen], cantidadATransferir);
-
-				montoCuentasList[cuentaOrigen] -= cantidadATransferir;
-				double saldo = getSaldoTotal();
-				montoCuentasList[cuentaDestino] += cantidadATransferir;
-
-				System.out.printf("%10.2f de %3d para %3d | Saldos [anterior:%10.2f  Total:%10.2f] %n",
-						cantidadATransferir, cuentaOrigen, cuentaDestino, saldo, getSaldoTotal());
 			}
+
+			System.out.printf(
+					"--- TRANSFERENCIA AUTORIZADA --- \n Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
+					cuentaOrigen, montoCuentasList[cuentaOrigen], cantidadATransferir);
+
+			montoCuentasList[cuentaOrigen] -= cantidadATransferir;
+			double saldo = getSaldoTotal();
+			montoCuentasList[cuentaDestino] += cantidadATransferir;
+
+			System.out.printf("%10.2f de %3d para %3d | Saldos [anterior:%10.2f  Total:%10.2f] %n", cantidadATransferir,
+					cuentaOrigen, cuentaDestino, saldo, getSaldoTotal());
+			
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+			System.out.println();
 		} finally {
 			bloqueoSincronizador.unlock();
 		}
