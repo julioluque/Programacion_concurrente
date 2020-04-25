@@ -1,5 +1,8 @@
 package usothreads;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class BancoSinSincronizar {
@@ -20,7 +23,7 @@ public class BancoSinSincronizar {
 class Banco {
 	private final double[] cuentas;
 	private ReentrantLock cierreBanco = new ReentrantLock();
-
+	
 	/**
 	 * Crear 100 cuentas corrientes y qeucada cuenta almacena 2000 pesos
 	 */
@@ -46,11 +49,17 @@ class Banco {
 	public void transferencia(int cuentaOrigen, int cuentaDestino, double cantidad) {
 
 		cierreBanco.lock();
-		
+
 		try {
+
 //			validamos que el saldo no sea mayor a la cantidad a transferir
 			if (cuentas[cuentaOrigen] < cantidad) {
+				System.out.println("--------- CANTIDAD INSUFICIENTES ------ cuenta Origen: " + cuentaOrigen
+						+ "... saldo: " + cuentas[cuentaOrigen] + " ... cantidad: " + cantidad);
 				return;
+			} else {
+				System.out.println("--------------- CANTIDAD OK ----------- cuenta Origen: " + cuentaOrigen
+						+ "... saldo: " + cuentas[cuentaOrigen] + " ... cantidad: " + cantidad);
 			}
 
 //			informa el hilo que va a ejecutar
@@ -68,7 +77,7 @@ class Banco {
 			System.out.printf(" Saldo total : %10.2f%n", getSaldoTotal());
 
 		} finally {
-			
+
 			cierreBanco.unlock();
 		}
 	}
@@ -120,7 +129,7 @@ class EjecucionTransfrencias implements Runnable {
 
 				banco.transferencia(deLaCuenta, paraLaCuenta, cantidad);
 //				Thread.sleep((int) Math.random() * 10);
-				Thread.sleep(10);
+				Thread.sleep(1000);
 			}
 		} catch (InterruptedException e) {
 			System.out.println("  ||| EXCEPCION");

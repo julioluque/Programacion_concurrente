@@ -25,7 +25,7 @@ public class HilosTransferencias implements Runnable {
 		try {
 			while (true) {
 				banco.transferir(cuentaOrigen, cuentaDestino, montoATransferir);
-				Thread.sleep(50);
+				Thread.sleep(100);
 			}
 		} catch (InterruptedException e) {
 			System.out.println("Error de TimeOut -> Excepcion: \n");

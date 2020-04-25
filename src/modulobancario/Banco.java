@@ -34,19 +34,25 @@ public class Banco {
 		bloqueoSincronizador.lock();
 
 		try {
+			System.out.print("\n" + Thread.currentThread());
+
 			if (montoCuentasList[cuentaOrigen] < cantidadATransferir) {
-//				System.out.print("\n"+Thread.currentThread());
-//				System.out.print("   El importe maximo superado");
+				System.out.printf(
+						"--- FONDOS INSUFICIENTES --- \n Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
+						cuentaDestino, montoCuentasList[cuentaOrigen], cantidadATransferir);
 				return;
 			} else {
-				
-				System.out.print("\n"+Thread.currentThread());
+
+				System.out.printf(
+						"--- TRANSFERENCIA AUTORIZADA --- \n Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
+						cuentaDestino, montoCuentasList[cuentaOrigen], cantidadATransferir);
+
 				montoCuentasList[cuentaOrigen] -= cantidadATransferir;
 				double saldo = getSaldoTotal();
 				montoCuentasList[cuentaDestino] += cantidadATransferir;
 
-				System.out.printf("%10.2f de %3d para %3d | Saldos [anterior:%10.2f  Total:%10.2f]", cantidadATransferir,
-						cuentaOrigen, cuentaDestino, saldo, getSaldoTotal());
+				System.out.printf("%10.2f de %3d para %3d | Saldos [anterior:%10.2f  Total:%10.2f] %n",
+						cantidadATransferir, cuentaOrigen, cuentaDestino, saldo, getSaldoTotal());
 			}
 		} finally {
 			bloqueoSincronizador.unlock();
