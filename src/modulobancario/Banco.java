@@ -44,17 +44,19 @@ public class Banco {
 			while (montoCuentasList[cuentaOrigen] < cantidadATransferir) {
 
 				System.out.printf(
-						"--- FONDOS INSUFICIENTES --- \n Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
+						"---- FONDOS INSUFICIENTES ----  Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
 						cuentaOrigen, montoCuentasList[cuentaOrigen], cantidadATransferir);
 
 				fondosInsuficientes.await();
+				if(montoCuentasList[cuentaOrigen] > cantidadATransferir) {
 				System.out.printf(
-						"--- SE LIBERO LA CUENTA --- \n Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
+						"++++ SE LIBERO LA CUENTA  ++++  Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
 						cuentaOrigen, montoCuentasList[cuentaOrigen], cantidadATransferir);
+				}
 			}
 
 			System.out.printf(
-					"--- TRANSFERENCIA AUTORIZADA --- \n Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
+					"---> TRANSFERENCIA AUTORIZADA ---> \n Tu cuenta: %3d \t Tu saldo %10.2f \t Monto a Transferir %8.2f %n",
 					cuentaOrigen, montoCuentasList[cuentaOrigen], cantidadATransferir);
 
 			montoCuentasList[cuentaOrigen] -= cantidadATransferir;
