@@ -1,0 +1,377 @@
+     30,89 de   5 para  79 | Saldos [anterior: 199969,11  Total: 200000,00] 
+
+Thread[Thread-8,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  62 	 Tu saldo    2000,00 	 Monto a Transferir    92,70 
+     92,70 de   8 para  62 | Saldos [anterior: 199907,30  Total: 200000,00] 
+
+Thread[Thread-6,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  18 	 Tu saldo    2000,00 	 Monto a Transferir    25,66 
+     25,66 de   6 para  18 | Saldos [anterior: 199974,34  Total: 200000,00] 
+
+Thread[Thread-9,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  37 	 Tu saldo    2000,00 	 Monto a Transferir    10,30 
+     10,30 de   9 para  37 | Saldos [anterior: 199989,70  Total: 200000,00] 
+
+Thread[Thread-92,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  49 	 Tu saldo    2000,00 	 Monto a Transferir     2,54 
+      2,54 de  92 para  49 | Saldos [anterior: 199997,46  Total: 200000,00] 
+
+Thread[Thread-10,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  97 	 Tu saldo    2000,00 	 Monto a Transferir     6,01 
+      6,01 de  10 para  97 | Saldos [anterior: 199993,99  Total: 200000,00] 
+
+Thread[Thread-11,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  45 	 Tu saldo    2000,00 	 Monto a Transferir    37,94 
+     37,94 de  11 para  45 | Saldos [anterior: 199962,06  Total: 200000,00] 
+
+Thread[Thread-12,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  48 	 Tu saldo    2000,00 	 Monto a Transferir    99,02 
+     99,02 de  12 para  48 | Saldos [anterior: 199900,98  Total: 200000,00] 
+
+Thread[Thread-13,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  14 	 Tu saldo    2000,00 	 Monto a Transferir     2,28 
+      2,28 de  13 para  14 | Saldos [anterior: 199997,72  Total: 200000,00] 
+
+Thread[Thread-15,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  28 	 Tu saldo    2000,00 	 Monto a Transferir    35,39 
+     35,39 de  15 para  28 | Saldos [anterior: 199964,61  Total: 200000,00] 
+
+Thread[Thread-16,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:   9 	 Tu saldo    2000,00 	 Monto a Transferir    14,04 
+     14,04 de  16 para   9 | Saldos [anterior: 199985,96  Total: 200000,00] 
+
+Thread[Thread-7,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  96 	 Tu saldo    2000,00 	 Monto a Transferir    18,46 
+     18,46 de   7 para  96 | Saldos [anterior: 199981,54  Total: 200000,00] 
+
+Thread[Thread-14,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  29 	 Tu saldo    2002,28 	 Monto a Transferir    64,24 
+     64,24 de  14 para  29 | Saldos [anterior: 199935,76  Total: 200000,00] 
+
+Thread[Thread-17,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  27 	 Tu saldo    2000,00 	 Monto a Transferir    43,14 
+     43,14 de  17 para  27 | Saldos [anterior: 199956,86  Total: 200000,00] 
+
+Thread[Thread-18,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  66 	 Tu saldo    2025,66 	 Monto a Transferir    31,60 
+     31,60 de  18 para  66 | Saldos [anterior: 199968,40  Total: 200000,00] 
+
+Thread[Thread-19,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  51 	 Tu saldo    2000,00 	 Monto a Transferir    78,31 
+     78,31 de  19 para  51 | Saldos [anterior: 199921,69  Total: 200000,00] 
+
+Thread[Thread-20,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  57 	 Tu saldo    2096,71 	 Monto a Transferir    64,60 
+     64,60 de  20 para  57 | Saldos [anterior: 199935,40  Total: 200000,00] 
+
+Thread[Thread-39,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  38 	 Tu saldo    2000,00 	 Monto a Transferir    27,61 
+     27,61 de  39 para  38 | Saldos [anterior: 199972,39  Total: 200000,00] 
+
+Thread[Thread-37,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  64 	 Tu saldo    2010,30 	 Monto a Transferir    33,98 
+     33,98 de  37 para  64 | Saldos [anterior: 199966,02  Total: 200000,00] 
+
+Thread[Thread-36,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:   7 	 Tu saldo    2000,00 	 Monto a Transferir    47,00 
+     47,00 de  36 para   7 | Saldos [anterior: 199953,00  Total: 200000,00] 
+
+Thread[Thread-35,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  68 	 Tu saldo    2000,00 	 Monto a Transferir    96,68 
+     96,68 de  35 para  68 | Saldos [anterior: 199903,32  Total: 200000,00] 
+
+Thread[Thread-38,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  44 	 Tu saldo    2027,61 	 Monto a Transferir    72,45 
+     72,45 de  38 para  44 | Saldos [anterior: 199927,55  Total: 200000,00] 
+
+Thread[Thread-30,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  98 	 Tu saldo    2000,00 	 Monto a Transferir    68,55 
+     68,55 de  30 para  98 | Saldos [anterior: 199931,45  Total: 200000,00] 
+
+Thread[Thread-32,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  77 	 Tu saldo    2000,00 	 Monto a Transferir    91,44 
+     91,44 de  32 para  77 | Saldos [anterior: 199908,56  Total: 200000,00] 
+
+Thread[Thread-28,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  71 	 Tu saldo    2035,39 	 Monto a Transferir    99,63 
+     99,63 de  28 para  71 | Saldos [anterior: 199900,37  Total: 200000,00] 
+
+Thread[Thread-31,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  36 	 Tu saldo    2000,00 	 Monto a Transferir    39,35 
+     39,35 de  31 para  36 | Saldos [anterior: 199960,65  Total: 200000,00] 
+
+Thread[Thread-29,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:   5 	 Tu saldo    2163,98 	 Monto a Transferir    90,00 
+     90,00 de  29 para   5 | Saldos [anterior: 199910,00  Total: 200000,00] 
+
+Thread[Thread-27,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  54 	 Tu saldo    2043,14 	 Monto a Transferir     7,70 
+      7,70 de  27 para  54 | Saldos [anterior: 199992,30  Total: 200000,00] 
+
+Thread[Thread-26,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  33 	 Tu saldo    2000,00 	 Monto a Transferir     8,17 
+      8,17 de  26 para  33 | Saldos [anterior: 199991,83  Total: 200000,00] 
+
+Thread[Thread-24,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:   8 	 Tu saldo    2000,00 	 Monto a Transferir    29,19 
+     29,19 de  24 para   8 | Saldos [anterior: 199970,81  Total: 200000,00] 
+
+Thread[Thread-23,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  86 	 Tu saldo    2000,00 	 Monto a Transferir    28,28 
+     28,28 de  23 para  86 | Saldos [anterior: 199971,72  Total: 200000,00] 
+
+Thread[Thread-22,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  74 	 Tu saldo    2000,00 	 Monto a Transferir    48,02 
+     48,02 de  22 para  74 | Saldos [anterior: 199951,98  Total: 200000,00] 
+
+Thread[Thread-21,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  75 	 Tu saldo    2000,00 	 Monto a Transferir    38,15 
+     38,15 de  21 para  75 | Saldos [anterior: 199961,85  Total: 200000,00] 
+
+Thread[Thread-25,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  51 	 Tu saldo    2000,00 	 Monto a Transferir    85,73 
+     85,73 de  25 para  51 | Saldos [anterior: 199914,27  Total: 200000,00] 
+
+Thread[Thread-34,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  81 	 Tu saldo    2000,00 	 Monto a Transferir    47,15 
+     47,15 de  34 para  81 | Saldos [anterior: 199952,85  Total: 200000,00] 
+
+Thread[Thread-33,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  49 	 Tu saldo    2008,17 	 Monto a Transferir    86,83 
+     86,83 de  33 para  49 | Saldos [anterior: 199913,17  Total: 200000,00] 
+
+Thread[Thread-40,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  55 	 Tu saldo    2000,00 	 Monto a Transferir     0,73 
+      0,73 de  40 para  55 | Saldos [anterior: 199999,27  Total: 200000,00] 
+
+Thread[Thread-41,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  41 	 Tu saldo    2000,00 	 Monto a Transferir    40,69 
+     40,69 de  41 para  41 | Saldos [anterior: 199959,31  Total: 200000,00] 
+
+Thread[Thread-44,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  25 	 Tu saldo    2072,45 	 Monto a Transferir     0,37 
+      0,37 de  44 para  25 | Saldos [anterior: 199999,63  Total: 200000,00] 
+
+Thread[Thread-43,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  75 	 Tu saldo    2087,77 	 Monto a Transferir    39,91 
+     39,91 de  43 para  75 | Saldos [anterior: 199960,09  Total: 200000,00] 
+
+Thread[Thread-42,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  26 	 Tu saldo    2000,00 	 Monto a Transferir    63,28 
+     63,28 de  42 para  26 | Saldos [anterior: 199936,72  Total: 200000,00] 
+
+Thread[Thread-45,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  63 	 Tu saldo    2098,21 	 Monto a Transferir    36,95 
+     36,95 de  45 para  63 | Saldos [anterior: 199963,05  Total: 200000,00] 
+
+Thread[Thread-46,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  29 	 Tu saldo    2000,00 	 Monto a Transferir    46,26 
+     46,26 de  46 para  29 | Saldos [anterior: 199953,74  Total: 200000,00] 
+
+Thread[Thread-47,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  19 	 Tu saldo    2000,00 	 Monto a Transferir    60,84 
+     60,84 de  47 para  19 | Saldos [anterior: 199939,16  Total: 200000,00] 
+
+Thread[Thread-48,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  34 	 Tu saldo    2099,02 	 Monto a Transferir     3,47 
+      3,47 de  48 para  34 | Saldos [anterior: 199996,53  Total: 200000,00] 
+
+Thread[Thread-49,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  22 	 Tu saldo    2089,36 	 Monto a Transferir     8,06 
+      8,06 de  49 para  22 | Saldos [anterior: 199991,94  Total: 200000,00] 
+
+Thread[Thread-50,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  53 	 Tu saldo    2000,00 	 Monto a Transferir    42,46 
+     42,46 de  50 para  53 | Saldos [anterior: 199957,54  Total: 200000,00] 
+
+Thread[Thread-51,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:   5 	 Tu saldo    2164,05 	 Monto a Transferir     9,16 
+      9,16 de  51 para   5 | Saldos [anterior: 199990,84  Total: 200000,00] 
+
+Thread[Thread-52,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  90 	 Tu saldo    2000,00 	 Monto a Transferir    93,32 
+     93,32 de  52 para  90 | Saldos [anterior: 199906,68  Total: 200000,00] 
+
+Thread[Thread-53,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  21 	 Tu saldo    2042,46 	 Monto a Transferir    44,78 
+     44,78 de  53 para  21 | Saldos [anterior: 199955,22  Total: 200000,00] 
+
+Thread[Thread-54,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  48 	 Tu saldo    2007,70 	 Monto a Transferir    79,84 
+     79,84 de  54 para  48 | Saldos [anterior: 199920,16  Total: 200000,00] 
+
+Thread[Thread-55,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  85 	 Tu saldo    2000,73 	 Monto a Transferir    42,24 
+     42,24 de  55 para  85 | Saldos [anterior: 199957,76  Total: 200000,00] 
+
+Thread[Thread-56,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  52 	 Tu saldo    2000,00 	 Monto a Transferir    83,36 
+     83,36 de  56 para  52 | Saldos [anterior: 199916,64  Total: 200000,00] 
+
+Thread[Thread-57,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:   2 	 Tu saldo    2064,60 	 Monto a Transferir    84,35 
+     84,35 de  57 para   2 | Saldos [anterior: 199915,65  Total: 200000,00] 
+
+Thread[Thread-58,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  11 	 Tu saldo    2000,00 	 Monto a Transferir    13,20 
+     13,20 de  58 para  11 | Saldos [anterior: 199986,80  Total: 200000,00] 
+
+Thread[Thread-59,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  94 	 Tu saldo    2000,00 	 Monto a Transferir    66,20 
+     66,20 de  59 para  94 | Saldos [anterior: 199933,80  Total: 200000,00] 
+
+Thread[Thread-60,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:   1 	 Tu saldo    2008,91 	 Monto a Transferir     4,33 
+      4,33 de  60 para   1 | Saldos [anterior: 199995,67  Total: 200000,00] 
+
+Thread[Thread-61,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:   6 	 Tu saldo    2000,00 	 Monto a Transferir    42,99 
+     42,99 de  61 para   6 | Saldos [anterior: 199957,01  Total: 200000,00] 
+
+Thread[Thread-62,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  71 	 Tu saldo    2092,70 	 Monto a Transferir    58,26 
+     58,26 de  62 para  71 | Saldos [anterior: 199941,74  Total: 200000,00] 
+
+Thread[Thread-64,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  76 	 Tu saldo    2033,98 	 Monto a Transferir    93,20 
+     93,20 de  64 para  76 | Saldos [anterior: 199906,80  Total: 200000,00] 
+
+Thread[Thread-63,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  24 	 Tu saldo    2036,95 	 Monto a Transferir    21,99 
+     21,99 de  63 para  24 | Saldos [anterior: 199978,01  Total: 200000,00] 
+
+Thread[Thread-65,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  56 	 Tu saldo    2000,00 	 Monto a Transferir    65,11 
+     65,11 de  65 para  56 | Saldos [anterior: 199934,89  Total: 200000,00] 
+
+Thread[Thread-66,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  18 	 Tu saldo    2031,60 	 Monto a Transferir    71,47 
+     71,47 de  66 para  18 | Saldos [anterior: 199928,53  Total: 200000,00] 
+
+Thread[Thread-67,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  53 	 Tu saldo    2000,00 	 Monto a Transferir    85,35 
+     85,35 de  67 para  53 | Saldos [anterior: 199914,65  Total: 200000,00] 
+
+Thread[Thread-68,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  47 	 Tu saldo    2096,68 	 Monto a Transferir    27,99 
+     27,99 de  68 para  47 | Saldos [anterior: 199972,01  Total: 200000,00] 
+
+Thread[Thread-69,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  10 	 Tu saldo    2000,00 	 Monto a Transferir    39,61 
+     39,61 de  69 para  10 | Saldos [anterior: 199960,39  Total: 200000,00] 
+
+Thread[Thread-70,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  77 	 Tu saldo    2000,00 	 Monto a Transferir    32,21 
+     32,21 de  70 para  77 | Saldos [anterior: 199967,79  Total: 200000,00] 
+
+Thread[Thread-71,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  62 	 Tu saldo    2157,90 	 Monto a Transferir    43,41 
+     43,41 de  71 para  62 | Saldos [anterior: 199956,59  Total: 200000,00] 
+
+Thread[Thread-72,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  41 	 Tu saldo    2000,00 	 Monto a Transferir    77,80 
+     77,80 de  72 para  41 | Saldos [anterior: 199922,20  Total: 200000,00] 
+
+Thread[Thread-73,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  35 	 Tu saldo    2000,00 	 Monto a Transferir    58,82 
+     58,82 de  73 para  35 | Saldos [anterior: 199941,18  Total: 200000,00] 
+
+Thread[Thread-75,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  14 	 Tu saldo    2078,05 	 Monto a Transferir    35,92 
+     35,92 de  75 para  14 | Saldos [anterior: 199964,08  Total: 200000,00] 
+
+Thread[Thread-74,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  36 	 Tu saldo    2048,02 	 Monto a Transferir     9,12 
+      9,12 de  74 para  36 | Saldos [anterior: 199990,88  Total: 200000,00] 
+
+Thread[Thread-77,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:   0 	 Tu saldo    2123,65 	 Monto a Transferir    20,27 
+     20,27 de  77 para   0 | Saldos [anterior: 199979,73  Total: 200000,00] 
+
+Thread[Thread-78,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  75 	 Tu saldo    2000,00 	 Monto a Transferir    16,94 
+     16,94 de  78 para  75 | Saldos [anterior: 199983,06  Total: 200000,00] 
+
+Thread[Thread-79,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:   6 	 Tu saldo    2030,89 	 Monto a Transferir    74,02 
+     74,02 de  79 para   6 | Saldos [anterior: 199925,98  Total: 200000,00] 
+
+Thread[Thread-80,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  94 	 Tu saldo    2000,00 	 Monto a Transferir    37,79 
+     37,79 de  80 para  94 | Saldos [anterior: 199962,21  Total: 200000,00] 
+
+Thread[Thread-81,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  78 	 Tu saldo    2047,15 	 Monto a Transferir    96,86 
+     96,86 de  81 para  78 | Saldos [anterior: 199903,14  Total: 200000,00] 
+
+Thread[Thread-76,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  39 	 Tu saldo    2093,20 	 Monto a Transferir    61,99 
+     61,99 de  76 para  39 | Saldos [anterior: 199938,01  Total: 200000,00] 
+
+Thread[Thread-82,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  55 	 Tu saldo    2000,00 	 Monto a Transferir    95,86 
+     95,86 de  82 para  55 | Saldos [anterior: 199904,14  Total: 200000,00] 
+
+Thread[Thread-83,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  88 	 Tu saldo    2000,00 	 Monto a Transferir    74,31 
+     74,31 de  83 para  88 | Saldos [anterior: 199925,69  Total: 200000,00] 
+
+Thread[Thread-84,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  71 	 Tu saldo    2000,00 	 Monto a Transferir    60,36 
+     60,36 de  84 para  71 | Saldos [anterior: 199939,64  Total: 200000,00] 
+
+Thread[Thread-85,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  10 	 Tu saldo    2042,24 	 Monto a Transferir    25,65 
+     25,65 de  85 para  10 | Saldos [anterior: 199974,35  Total: 200000,00] 
+
+Thread[Thread-86,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  64 	 Tu saldo    2028,28 	 Monto a Transferir    69,68 
+     69,68 de  86 para  64 | Saldos [anterior: 199930,32  Total: 200000,00] 
+
+Thread[Thread-87,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  33 	 Tu saldo    2000,00 	 Monto a Transferir    71,31 
+     71,31 de  87 para  33 | Saldos [anterior: 199928,69  Total: 200000,00] 
+
+Thread[Thread-88,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  77 	 Tu saldo    2074,31 	 Monto a Transferir    84,57 
+     84,57 de  88 para  77 | Saldos [anterior: 199915,43  Total: 200000,00] 
+
+Thread[Thread-89,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  82 	 Tu saldo    2000,00 	 Monto a Transferir    90,82 
+     90,82 de  89 para  82 | Saldos [anterior: 199909,18  Total: 200000,00] 
+
+Thread[Thread-90,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  37 	 Tu saldo    2093,32 	 Monto a Transferir    64,67 
+     64,67 de  90 para  37 | Saldos [anterior: 199935,33  Total: 200000,00] 
+
+Thread[Thread-91,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  95 	 Tu saldo    2000,00 	 Monto a Transferir    95,95 
+     95,95 de  91 para  95 | Saldos [anterior: 199904,05  Total: 200000,00] 
+
+Thread[Thread-93,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:   2 	 Tu saldo    2000,00 	 Monto a Transferir     1,10 
+      1,10 de  93 para   2 | Saldos [anterior: 199998,90  Total: 200000,00] 
+
+Thread[Thread-94,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  79 	 Tu saldo    2103,99 	 Monto a Transferir    95,63 
+     95,63 de  94 para  79 | Saldos [anterior: 199904,37  Total: 200000,00] 
+
+Thread[Thread-95,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  76 	 Tu saldo    2095,95 	 Monto a Transferir    33,26 
+     33,26 de  95 para  76 | Saldos [anterior: 199966,74  Total: 200000,00] 
+
+Thread[Thread-96,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  18 	 Tu saldo    2018,46 	 Monto a Transferir    36,14 
+     36,14 de  96 para  18 | Saldos [anterior: 199963,86  Total: 200000,00] 
+
+Thread[Thread-97,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  82 	 Tu saldo    2006,01 	 Monto a Transferir    87,03 
+     87,03 de  97 para  82 | Saldos [anterior: 199912,97  Total: 200000,00] 
+
+Thread[Thread-98,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  78 	 Tu saldo    2068,55 	 Monto a Transferir    50,81 
+     50,81 de  98 para  78 | Saldos [anterior: 199949,19  Total: 200000,00] 
+
+Thread[Thread-99,5,main]--- TRANSFERENCIA AUTORIZADA --- 
+ Tu cuenta:  16 	 Tu saldo    2000,00 	 Monto a Transferir    96,91 
+     96,91 de  99 para  16 | Saldos [anterior: 199903,09  Total: 200000,00] 
